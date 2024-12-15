@@ -1,0 +1,18 @@
+.Navbar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .Navbar-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-right: -25%;
+    }
+
+    
+}
