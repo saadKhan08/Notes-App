@@ -58,7 +58,7 @@ const Paste = () => {
                 >
                   {/* heading and Description */}
                   <div className="w-[50%] flex flex-col space-y-3">
-                    <p className="text-4xl font-semibold ">{paste?.title}</p>
+                    <p className="text-2xl font-semibold ">{paste?.title}</p>
                     <p className="text-sm font-normal line-clamp-3 max-w-[80%] text-[#707070]">
                       {paste?.content}
                     </p>
