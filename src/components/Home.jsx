@@ -10,8 +10,10 @@ import './Home.css';
 const Home = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
-  const [searchParams, setSearchParams] = useSearchParams(); // Destructure useSearchParams
-  const pasteId = searchParams.get("pasteId"); // Get pasteId from the search params
+  const [searchParams, setSearchParams] = useSearchParams(); 
+  // Destructure useSearchParams
+  const pasteId = searchParams.get("pasteId"); 
+  // Get pasteId from the search params
   const pastes = useSelector((state) => state.paste.pastes);
   const dispatch = useDispatch();
 
@@ -62,7 +64,7 @@ const Home = () => {
 
   return (
     <div className="w-full h-full py-10 max-w-[1200px] mx-auto px-5 lg:px-0 ">
-      <div className="flex flex-col gap-y-5 items-start">
+      <div className="flex flex-col gap-y-5 items-start w-[70%] min-w-[340px] mx-auto">
         <div className="main-title">
           <h3>Let&lsquo;s create Notes 🎉</h3>
         </div>
@@ -89,7 +91,7 @@ const Home = () => {
    <span></span>
    </div>
           <button
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm font-semibold px-5 py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 h-[50px]"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm font-semibold px-5 py-2 me-2 mb-0.9 dark:bg-blue-600 dark:hover:bg-blue-700 h-[50px]"
             onClick={createPaste}
           >
             {pasteId ? "Update Notes" : "Create My Notes"}

@@ -32,9 +32,9 @@ const Paste = () => {
    <span></span>
    <span></span>
    </div>
-      <div className="flex flex-col gap-y-3">
+      <div className="flex flex-col gap-y-3 w-[70%] min-w-[340px] mx-auto ">
         {/* Search */}
-        <div className="w-full flex gap-3 px-4 py-2  rounded-[0.3rem] border-4 border-[rgba(128,121,121,0.3)] bg-white mt-6">
+        <div className="w-full flex gap-3 px-4 py-2  rounded-[0.3rem] border-4 border-[rgba(128,121,121,0.3)] bg-white mt-1">
           <input
             type="search"
             placeholder="Search your notes here..."

@@ -209,73 +209,71 @@
 }
 
 .main-title {
-	position: relative;
-	z-index: 0;
-	width: 265px;
-	height: 42px;
-	margin: -10px;
-	border-radius: 15px;
-	overflow: hidden;
-	/* padding: 2rem; */
-    color: white;
-    margin-left: 39%;
-    font-size: 1.5rem;
-    font-weight: 600;
-    
-    padding: 0.1rem 1rem 0.2rem 1rem;
+  position: relative;
+  z-index: 0;
+  width: 265px;
+  height: 42px;
+  margin: -10px;
+  border-radius: 15px;
+  overflow: hidden;
 
-	&::before {
-		content: "";
-		position: absolute;
-		z-index: -2;
-		left: -50%;
-		top: -50%;
-		width: 200%;
-		height: 200%;
-		background-color: #1a232a;
-		background-repeat: no-repeat;
-		background-position: 0 0;
-		background-image: conic-gradient(
-			transparent,
-			rgb(90, 234, 234),
-			transparent 30%
-		);
-		animation: rotate 4s linear infinite;
-	}
+  color: white;
+  margin-left: 39%;
+  font-size: 1.5rem;
+  font-weight: 600;
 
-	&::after {
-		content: "";
-		position: absolute;
-		z-index: -1;
-		left: 3px;
-		top: 6px;
-		width: calc(100% - 12px);
-		height: calc(100% - 12px);
-		background: #000;
-		border-radius: 15px;
-	}
+  padding: 0.1rem 1rem 0.2rem 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #1a232a;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(
+      transparent,
+      rgb(90, 234, 234),
+      transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: #000;
+    border-radius: 15px;
+  }
 }
 
 .main-title h3::after {
-	animation: opacityChange 5s infinite linear;
+  animation: opacityChange 5s infinite linear;
 }
 
 @keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);    
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .main-title {
-        margin-left: 10%;
-        width: 75%;
-        margin-top: -5%;
-        
-    }
+  .main-title {
+    margin-left: 10%;
+    width: 75%;
+    margin-top: -5%;
+  }
 }
-
