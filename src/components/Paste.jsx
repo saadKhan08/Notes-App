@@ -21,7 +21,7 @@ const Paste = () => {
   );
 
   return (
-    <div className="w-full h-full py-10 max-w-[1200px] mx-auto px-5 lg:px-0">
+    <div className="w-full items-center h-full py-10 max-w-[1200px] mx-auto px-5 lg:px-0">
        <div className="background">
    <span></span>
    <span></span>
@@ -32,7 +32,7 @@ const Paste = () => {
    <span></span>
    <span></span>
    </div>
-      <div className="flex flex-col gap-y-3 w-[70%] min-w-[340px] mx-auto ">
+      <div className="flex flex-col gap-y-3 w-[70%] min-w-[340px] mx-auto">
         {/* Search */}
         <div className="w-full flex gap-3 px-4 py-2  rounded-[0.3rem] border-4 border-[rgba(128,121,121,0.3)] bg-white mt-1">
           <input

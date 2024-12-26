@@ -48,7 +48,7 @@ const Home = () => {
     setTitle("");
     setValue("");
     setSearchParams({});
-    // navigate("/");
+    
   };
 
   useEffect(() => {
@@ -64,18 +64,18 @@ const Home = () => {
 
   return (
     <div className="w-full h-full py-10 max-w-[1200px] mx-auto px-5 lg:px-0 ">
-      <div className="flex flex-col gap-y-5 items-start w-[70%] min-w-[340px] mx-auto">
+      <div  className="flex flex-col gap-y-5 items-start w-[70%] min-w-[340px] mx-auto">
         <div className="main-title">
           <h3>Let&lsquo;s create Notes 🎉</h3>
         </div>
   
-        <div className="w-full flex flex-row gap-x-4 justify-between items-center">
+        <div id="input-note" className="w-full flex flex-row gap-x-4 justify-between items-center">
           <input
             type="text"
             placeholder="Title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            // Dynamic width based on whether pasteId is present
+            // Dynamic width based on whether NotesId is present
             className={`${
               pasteId ? "w-[80%]" : "w-[85%]"
             } text-black border-4 border-[rgba(128,121,121,0.3)] border-input rounded-md p-2`}
@@ -90,22 +90,22 @@ const Home = () => {
    <span></span>
    <span></span>
    </div>
-          <button
+          <button id="btn-create-note"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg text-sm font-semibold px-5 py-2 me-2 mb-0.9 dark:bg-blue-600 dark:hover:bg-blue-700 h-[50px]"
             onClick={createPaste}
           >
-            {pasteId ? "Update Notes" : "Create My Notes"}
+            {pasteId ? "Update" : "Save"}
           </button>
 
-        {pasteId &&  <button
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 "
+        {pasteId &&  <button 
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-2.5 ml-[-9px]  dark:bg-blue-600 dark:hover:bg-blue-700 "
             onClick={resetPaste}
           >
-            <PlusCircle size={20} />
+            <PlusCircle size={20} className="" />
           </button>}
         </div>
 
-        <div
+        <div id="main-notes"
           className={`w-full flex flex-col items-start relative rounded bg-opacity-10 border-4 border-[rgba(128,121,121,0.3)] backdrop-blur-2xl`}
         >
           <div

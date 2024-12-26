@@ -17,7 +17,7 @@ const pasteSlice = createSlice({
 
       if (index >= 0) {
         // If the course is already in the Pastes, do not modify the quantity
-        toast.error("Paste already exist")
+        toast.error("Notes already exist")
         return
       }
       // If the course is not in the Pastes, add it to the Pastes
@@ -26,7 +26,7 @@ const pasteSlice = createSlice({
       // Update to localstorage
       localStorage.setItem("pastes", JSON.stringify(state.pastes))
       // show toast
-      toast.success("Paste added")
+      toast.success("Notes added")
     },
 
     updatePastes: (state, action) => {
@@ -34,12 +34,12 @@ const pasteSlice = createSlice({
       const index = state.pastes.findIndex((item) => item._id === paste._id)
 
       if (index >= 0) {
-        // If the course is found in the Pastes, update it
+        // If the course is found in the Notes, update it
         state.pastes[index] = paste
         // Update to localstorage
         localStorage.setItem("pastes", JSON.stringify(state.pastes))
         // show toast
-        toast.success("Paste updated")
+        toast.success("Notes updated")
       }
     },
     removeFromPastes: (state, action) => {
@@ -54,7 +54,7 @@ const pasteSlice = createSlice({
         // Update to localstorage
         localStorage.setItem("pastes", JSON.stringify(state.pastes))
         // show toast
-        toast.success("Paste deleted")
+        toast.success("Notes deleted")
       }
     },
     resetPaste: (state) => {

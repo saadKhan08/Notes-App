@@ -1,8 +1,4 @@
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
-  }
-}
+
 
 .background {
   position: fixed;
@@ -25,6 +21,12 @@
   animation-duration: 41;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
 }
 
 .background span:nth-child(0) {
@@ -216,9 +218,9 @@
   margin: -10px;
   border-radius: 15px;
   overflow: hidden;
-
+  margin-right: 50px; 
   color: white;
-  margin-left: 39%;
+  margin-left: 35%;
   font-size: 1.5rem;
   font-weight: 600;
 
@@ -247,7 +249,7 @@
     content: "";
     position: absolute;
     z-index: -1;
-    left: 3px;
+    left: 6px;
     top: 6px;
     width: calc(100% - 12px);
     height: calc(100% - 12px);
@@ -270,10 +272,36 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .main-title {
-    margin-left: 10%;
-    width: 75%;
-    margin-top: -5%;
+@keyframes opacityChange {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
+
+@media screen and (max-width: 480px) {
+  #main-notes {
+    width: 95%;
+    margin-left: 2.02%;
+  }
+  #input-note {
+    width: 93%;
+    margin-left: 1.1%;
+  }
+  .main-title {
+    margin-left: 12%;
+    width: 75%;
+    margin-top: -7.5%;
+  }
+  #btn-create-note {
+    height: 43px;
+  }
+
+}
+
+
